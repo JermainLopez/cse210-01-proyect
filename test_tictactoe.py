@@ -10,7 +10,7 @@ def winner_or_draw_test():
         for i in range(9):
             x = random(19)
             m = x % 2
-            if x == 0:
+            if m == 0:
                 list[i] = "X"
             else:
                 list[i] = "O"
@@ -25,5 +25,5 @@ def player1_or_2_test():
             assert player1_or_2("PLayer X") == "PLayer O"
         else:
             assert player1_or_2("PLayer O") == "PLayer X"
-            
+
 pytest.main(["-v", "--tb=line", "-rN", __file__])
